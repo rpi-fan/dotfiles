@@ -10,7 +10,7 @@
 # ##########################
 # Variables
 #
-dir=~/.dotfiles				# dotfiles directory
+dir=~/.dotfiles 			# dotfiles directory
 olddir=~/.dotfiles_old		# old dotfiles backup directory
 files=`ls -1 $dir/__*`		# list of files/folders to symlink in homedir
 #
@@ -35,7 +35,7 @@ for file in $files; do
 	targetname=`echo $basename | sed 's/__//'`
 	echo "Moving any existing dotfiles from ~ to $oldir"
 	mv ~/.$targetname $olddir/
-	echo "Creating symlink to $file in homedirectory"
+	echo "Creating symlink to $file in home directory"
 	ln -s $dir/$basename ~/.$targetname
 done
 
