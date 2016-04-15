@@ -95,4 +95,5 @@ set list listchars=tab:>´,trail:´,nbsp:´
 iabbrev @@ rpi-fan@posteo.de
 iabbrev she #!/usr/bin/python 
 iabbrev utf # -*- coding: utf-8 -*-
-
+"Kommentar hinzu zum testen von git
+"
