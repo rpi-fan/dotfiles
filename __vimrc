@@ -83,7 +83,7 @@ set background=dark " When set to "dark", Vim will try to use colors that look
 
 set mouse=a         " Enable the use of the mouse.
 
-
+map <F5> :! wc % <CR>
 map <F6> :setlocal spell! spelllang=de_DE<CR>
 
 
@@ -100,7 +100,7 @@ syntax enable
 
 set printoptions=number:y
 
-set list listchars=tab:>´,trail:´,nbsp:´
+set list listchars=tab:>´,trail:.,nbsp:´
 
 "Kommentar hinzu zum testen von git
 "
