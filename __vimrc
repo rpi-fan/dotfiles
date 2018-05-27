@@ -4,8 +4,8 @@
 " For multi-byte character support (CJK support, for example):
 "set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
-"set nocompatible   " Get rid of Vi compatibilty. SET FIRST!
-		    " but NO MORE iabbrev
+set nocompatible   " Get rid of Vi compatibilty. SET FIRST!
+" but NO MORE iabbrev
 
 set cul             " Current Line Underline
 
@@ -89,7 +89,7 @@ map <F6> :setlocal spell! spelllang=de_DE<CR>
 
 "set foldmethod=indent
 
-nnoremap <space> za
+nnoremap <space> za " spacebar macht toggled fold
  
 filetype plugin indent on
 
@@ -100,7 +100,8 @@ syntax enable
 
 set printoptions=number:y
 
-set list listchars=tab:>´,trail:.,nbsp:´
+set list listchars=tab:>´,trail:~,nbsp:´
 
 "Kommentar hinzu zum testen von git
 "
+
