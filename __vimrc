@@ -81,6 +81,10 @@ set background=dark " When set to "dark", Vim will try to use colors that look
                     " try to use colors that look good on a light background.
                     " Any other value is illegal.
 
+colorscheme desert
+
+set t_Co=256		" enable 256-color mode
+
 set mouse=a         " Enable the use of the mouse.
 
 map <F5> :! wc % <CR>
@@ -95,8 +99,7 @@ filetype plugin indent on
 
 let python_highlight_all = 1
 
-syntax enable
-" syntax on
+syntax enable		" preiously syntax on
 
 set printoptions=number:y
 
