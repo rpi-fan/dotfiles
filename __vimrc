@@ -127,6 +127,7 @@ set showmatch
 set mouse=a
 
 " Show relative line numbers
+
 set relativenumber
 
 
@@ -138,6 +139,17 @@ set showcmd
 
 set textwidth=79
 
+" set showmode
+
+" set showcmd
+
+set wrap
+
+set textwidth=79
+
+" line wrapping
+" noch zu testen!
+" set formatopions=qrn1
 set colorcolumn=80
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
