@@ -7,7 +7,7 @@
 "Angepasst und veraendert für khs
 "
 " Version vom:
-"		2018-06-06
+" 2018-06-08
 
 " Sections:
 "	-> General
@@ -28,15 +28,17 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ENTER THE CURRENT MILLENIUM
+set nocompatible
+
 " sets how many lines of history VIM has to remember
+" must go after the above statement "set nocompatible"
 set history=700
 
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
 "
-" ENTER THE CURRENT MILLENIUM
-set nocompatible
 "
 " Das muss noch getestet werden!
 
@@ -51,7 +53,7 @@ set nocompatible
 " " Fast saving
 " nmap <leader>w :w!<cr>
 "
-"" Search down into subfolders
+" Search down into subfolders
 " Provides tab-completion for all files-related tasks
 set path+=**
 "
@@ -62,7 +64,7 @@ set path+=**
 " Things to consider:
 "  :b lets you autocomplete any open buffer
 "
-
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -94,7 +96,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 "
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 "
 " Highlight search results
@@ -111,8 +113,9 @@ set incsearch
 "
 " Show matching brackets when text indicator is over them
 set showmatch
+"
 " How many tenths of a second to blink when matching brackets
-set mat=2
+" set mat=2
 "
 " No annoying sound on errors
 " set noerrorbells
@@ -120,15 +123,22 @@ set mat=2
 " set t_vb=
 " set tm=500
 "
-" Show line numbers.
-autocmd InsertEnter * :set number
-"
-" Show relative line numbers.
-autocmd InsertLeave * :set relativenumber
+" Enable the use of a mouse
+set mouse=a
+
+" Show relative line numbers
+set relativenumber
+
 
 set list listchars=tab:>´,trail:~,nbsp:´
 
+set showmode
 
+set showcmd
+
+set textwidth=79
+
+set colorcolumn=80
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -136,7 +146,8 @@ set list listchars=tab:>´,trail:~,nbsp:´
 " Enable syntax highlighting
 syntax enable
 "
-colorscheme desert
+" colorscheme desert
+"
 set background=dark
 "
 " " Set extra options when running in GUI mode
@@ -162,7 +173,7 @@ set ffs=unix,dos,mac
 " set nowb
 " set noswapfile
 "
-
+set undofile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,6 +185,7 @@ set smarttab
 "
 " 1 tab == 4 spaces
 set shiftwidth=4
+set softtabstop=4
 set tabstop=4
 "
 " Linebreak on 500 characters
@@ -182,7 +194,7 @@ set tabstop=4
 "
 " set ai "Auto indent
 " set si "Smart indent
-" set wrap "Wrap lines
+set wrap "Wrap lines
 "
 
 
@@ -234,7 +246,7 @@ set tabstop=4
 " Switch CWD to the directory of the open buffer
 " map <leader>cd :cd %:p:h<cr>:pwd<cr>
 "
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 " try
 "   set switchbuf=useopen,usetab,newtab
 "     set stal=2
@@ -257,7 +269,7 @@ set viminfo^=%
 set laststatus=2
 "
 " Format the status line
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Col:\ %c\ %=%P
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -279,14 +291,15 @@ set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 "   vmap <D-k> <M-k>
 " endif
 "
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-   exe "normal mz"
-   %s/\s\+$//ge
-   exe "normal `z"
-endfunc
+" Delete trailing white space on save, not only useful for Python and CoffeeScript ;)
+" func! DeleteTrailingWS()
+"   exe "normal mz"
+"   %s/\s\+$//ge
+"   exe "normal `z"
+" endfunc
 " autocmd BufWrite *.py :call DeleteTrailingWS()
 " autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite * :%s/\s\+$//e
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -390,7 +403,7 @@ map <F6> :setlocal spell! spelllang=de_DE<CR>
 "     return ''
 " endfunction
 "
-" Don't close window, when deleting a buffer 
+" Don't close window, when deleting a buffer
 " command! Bclose call <SID>BufcloseCloseIt()
 " function! <SID>BufcloseCloseIt()
 "    let l:currentBufNum = bufnr("%")
