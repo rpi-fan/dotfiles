@@ -359,8 +359,9 @@ autocmd BufWrite * :%s/\s\+$//e
 " map <leader>sa zg
 " map <leader>s? z=
 "
-map <F5> :! wc % <CR>
-map <F6> :setlocal spell! spelllang=de_DE<CR>
+map <F5> :! wc % <return>
+" map <F6> :setlocal spell! spelllang=de_DE<CR>
+map <F6> :setlocal spell spelllang=de<return>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
