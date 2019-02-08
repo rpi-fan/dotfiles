@@ -2,7 +2,7 @@
 "
 "Original von:
 "Amir Salihefendic
-"httpss://web.archive.org/web/20160115132754/http://amix.dk/vim/vimrc.html
+"https://web.archive.org/web/20160115132754/http://amix.dk/vim/vimrc.html
 "
 "https://github.com/amix/vimrc
 "
@@ -49,11 +49,11 @@ filetype indent on
 "
 " " With a map leader it's possible to do extra key combinations
 " " like <leader>w saves the current file
-" let mapleader = ","
+ let mapleader = ","
 " let g:mapleader = ","
 "
 " " Fast saving
-" nmap <leader>w :w!<cr>
+nmap <leader>w :w!<cr>
 "
 " Search down into subfolders
 " Provides tab-completion for all files-related tasks
@@ -152,7 +152,7 @@ set textwidth=79
 " line wrapping
 " noch zu testen!
 " set formatopions=qrn1
-set colorcolumn=80
+set colorcolumn=81
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
