@@ -136,16 +136,12 @@ set mouse=a
 
 set relativenumber
 
-
-set list listchars=tab:>´,trail:~,nbsp:´,eol:¬
+set list
+set listchars=tab:»-,trail:~,space:→,eol:¬
 
 set showmode
 
 set showcmd
-
-" set showmode
-
-" set showcmd
 
 set wrap
 
@@ -162,11 +158,10 @@ set colorcolumn=81
 " Enable syntax highlighting
 syntax enable
 "
-" colorscheme desert
-colorscheme peaksea
-
+colorscheme desert
 "
 set background=dark
+"set background=light
 "
 " " Set extra options when running in GUI mode
 " if has("gui_running")
