@@ -11,7 +11,7 @@
 " Version vom:
 " 2018-06-08
 " 2019-02-20
-
+" 2019 03-17 <F4> set list ON/OFF
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Sections:
@@ -77,7 +77,7 @@ set path+=**
 " Set 7 lines to the cursor - when moving vertically using j/k
 " set so=7
 "
-" Turn on the WiLd menu
+" Turn on the Wild menu
 set wildmenu
 "
 " Ignore compiled files
@@ -135,7 +135,7 @@ set mouse=a
 " Show relative line numbers
 
 set relativenumber
-
+map <F4> :set list!<CR>
 set list
 set listchars=tab:»-,trail:~,space:→,eol:¬
 
