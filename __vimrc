@@ -14,7 +14,11 @@
 " 2019 03-17 <F4> set list ON/OFF
 " 2019-07-05 festgestellt, dass Vim mit dieser vimrc keine Kopieren in die
 "           Zwischenablage erlaubt.
-"           Das passiert auch mit NeoVim und deser vimrc
+"           Das passiert auch mit NeoVim und dieser vimrc
+"           set mouse auskommentiert, mit "yy" kopiert und schon funktioniert es
+"
+" 2019 07-26 <F4> set list OFF/ON /damit sind die Anzeigen per default aus-
+"           geblendet..
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Sections:
@@ -133,13 +137,13 @@ set showmatch
 " set tm=500
 "
 " Enable the use of a mouse
-"       set mouse=a
+" set mouse=a
 
 " Show relative line numbers
 
 set relativenumber
 map <F4> :set list!<CR>
-set list
+" set list
 set listchars=tab:»-,trail:~,space:→,eol:¬
 
 set showmode
