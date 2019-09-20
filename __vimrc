@@ -19,6 +19,8 @@
 "
 " 2019 07-26 <F4> set list OFF/ON /damit sind die Anzeigen per default aus-
 "           geblendet..
+" 2019-09-20 Hybrid line numbers enabled
+"           No more useless Zeros at current line number
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Sections:
@@ -140,10 +142,14 @@ set showmatch
 " set mouse=a
 
 " Show relative line numbers
+" set relativnumber
+"
+" Show hybrid line numbers
+" No more useless Zero on current line
+set number relativenumber
 
-set relativenumber
-map <F4> :set list!<CR>
 " set list
+map <F4> :set list!<CR>
 set listchars=tab:»-,trail:~,space:→,eol:¬
 
 set showmode
